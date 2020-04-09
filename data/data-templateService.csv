@@ -1,368 +1,368 @@
 CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfig,expected
 "{
-    \"name\": \"testEmail\",
-    \"sub_template\": [
+    ""name"": ""testEmail"",
+    ""sub_template"": [
         {
-            \"sub_type\": \"subject\",
-            \"data\": \"{{name}} is my favourite subject\"
+            ""sub_type"": ""subject"",
+            ""data"": ""{{name}} is my favourite subject""
         },
         {
-            \"sub_type\": \"htmlpart\",
-            \"data\": \"<h1>Hello Acko</h1>\"
+            ""sub_type"": ""htmlpart"",
+            ""data"": ""<h1>Hello Acko</h1>""
         },
         {
-            \"sub_type\": \"textpart\",
-            \"data\": \"Welcome Home to template service\"
+            ""sub_type"": ""textpart"",
+            ""data"": ""Welcome Home to template service""
         }
     ],
-    \"type\": \"email\",
-    \"attributes\": {
-            \"mask\": \"ACKO\"
+    ""type"": ""email"",
+    ""attributes"": {
+            ""mask"": ""ACKO""
     },
-    \"sample_context_data\": {
-            \"name\": \"text\"
+    ""sample_context_data"": {
+            ""name"": ""text""
     }
 }","{
-    \"name\": \"testSMS\",
-    \"sub_template\": [
+    ""name"": ""testSMS"",
+    ""sub_template"": [
         {
-            \"sub_type\": \"textpart\",
-            \"data\": \"Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve\"
+            ""sub_type"": ""textpart"",
+            ""data"": ""Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
         }
     ],
-    \"type\": \"sms\",
-    \"attributes\": {
-    	\"mask\": \"ACKOACKO\"
+    ""type"": ""sms"",
+    ""attributes"": {
+    	""mask"": ""ACKOACKO""
     },
-    \"sample_context_data\": {
-    	\"name\": \"test\"
+    ""sample_context_data"": {
+    	""name"": ""test""
     }
 }",10,100,0,2,201
 "{
-    \"name\": \"\",
-    \"sub_template\": [
+    ""name"": """",
+    ""sub_template"": [
         {
-            \"sub_type\": \"subject\",
-            \"data\": \"{{name}} is my favourite subject\"
+            ""sub_type"": ""subject"",
+            ""data"": ""{{name}} is my favourite subject""
         },
         {
-            \"sub_type\": \"htmlpart\",
-            \"data\": \"<h1>Hello Acko</h1>\"
+            ""sub_type"": ""htmlpart"",
+            ""data"": ""<h1>Hello Acko</h1>""
         },
         {
-            \"sub_type\": \"textpart\",
-            \"data\": \"Welcome Home to template service\"
+            ""sub_type"": ""textpart"",
+            ""data"": ""Welcome Home to template service""
         }
     ],
-    \"type\": \"email\",
-    \"attributes\": {
-            \"mask\": \"ACKO\"
+    ""type"": ""email"",
+    ""attributes"": {
+            ""mask"": ""ACKO""
     },
-    \"sample_context_data\": {
-            \"name\": \"text\"
+    ""sample_context_data"": {
+            ""name"": ""text""
     }
 }","{
-    \"name\": \"\",
-    \"sub_template\": [
+    ""name"": """",
+    ""sub_template"": [
         {
-            \"sub_type\": \"textpart\",
-            \"data\": \"Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve\"
+            ""sub_type"": ""textpart"",
+            ""data"": ""Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
         }
     ],
-    \"type\": \"sms\",
-    \"attributes\": {
-            \"mask\": \"ACKOACKO\"
+    ""type"": ""sms"",
+    ""attributes"": {
+            ""mask"": ""ACKOACKO""
     },
-    \"sample_context_data\": {
-            \"name\": \"test\"
+    ""sample_context_data"": {
+            ""name"": ""test""
     }
 }",10,100,0,2,400
 "{
-    \"name\": \"testEmail\",
-    \"type\": \"email\",
-    \"attributes\": {
-            \"mask\": \"ACKO\"
+    ""name"": ""testEmail"",
+    ""type"": ""email"",
+    ""attributes"": {
+            ""mask"": ""ACKO""
     },
-    \"sample_context_data\": {
-            \"name\": \"text\"
+    ""sample_context_data"": {
+            ""name"": ""text""
     }
 }","{
-    \"name\": \"testSMS\",
-    \"type\": \"sms\",
-    \"attributes\": {
-            \"mask\": \"ACKOACKO\"
+    ""name"": ""testSMS"",
+    ""type"": ""sms"",
+    ""attributes"": {
+            ""mask"": ""ACKOACKO""
     },
-    \"sample_context_data\": {
-            \"name\": \"test\"
+    ""sample_context_data"": {
+            ""name"": ""test""
     }
 }",10,100,0,2,400
 "{
-    \"name\": \"testEmail\",
-    \"sub_template\": [
+    ""name"": ""testEmail"",
+    ""sub_template"": [
         {
-            \"sub_type\": \"htmlpart\",
-            \"data\": \"<h1>Hello Acko</h1>\"
+            ""sub_type"": ""htmlpart"",
+            ""data"": ""<h1>Hello Acko</h1>""
         },
         {
-            \"sub_type\": \"textpart\",
-            \"data\": \"Welcome Home to template service\"
+            ""sub_type"": ""textpart"",
+            ""data"": ""Welcome Home to template service""
         }
     ],
-    \"type\": \"email\",
-    \"attributes\": {
-            \"mask\": \"ACKO\"
+    ""type"": ""email"",
+    ""attributes"": {
+            ""mask"": ""ACKO""
     },
-    \"sample_context_data\": {
-            \"name\": \"text\"
+    ""sample_context_data"": {
+            ""name"": ""text""
     }
 }","{
-    \"name\": \"testSMS\",
-    \"sub_template\": [
+    ""name"": ""testSMS"",
+    ""sub_template"": [
        
     ],
-    \"type\": \"sms\",
-    \"attributes\": {
-            \"mask\": \"ACKOACKO\"
+    ""type"": ""sms"",
+    ""attributes"": {
+            ""mask"": ""ACKOACKO""
     },
-    \"sample_context_data\": {
-            \"name\": \"test\"
+    ""sample_context_data"": {
+            ""name"": ""test""
     }
 }",10,100,0,2,400
 "{
-    \"name\": \"testEmail\",
-    \"sub_template\": [
+    ""name"": ""testEmail"",
+    ""sub_template"": [
         {
-            \"sub_type\": \"subject\",
-            \"data\": \"{{name}} is my favourite subject\"
+            ""sub_type"": ""subject"",
+            ""data"": ""{{name}} is my favourite subject""
         },
         {
-            \"sub_type\": \"textpart\",
-            \"data\": \"Welcome Home to template service\"
+            ""sub_type"": ""textpart"",
+            ""data"": ""Welcome Home to template service""
         }
     ],
-    \"type\": \"email\",
-    \"attributes\": {
-            \"mask\": \"ACKO\"
+    ""type"": ""email"",
+    ""attributes"": {
+            ""mask"": ""ACKO""
     },
-    \"sample_context_data\": {
-            \"name\": \"text\"
+    ""sample_context_data"": {
+            ""name"": ""text""
     }
 }","{
-    \"name\": \"testSMS\",
-    \"sub_template\": [
+    ""name"": ""testSMS"",
+    ""sub_template"": [
         {
-            \"sub_type\": \"subject\",
-            \"data\": \"{{name}} is my favourite subject\"
+            ""sub_type"": ""subject"",
+            ""data"": ""{{name}} is my favourite subject""
         },
         {
-            \"sub_type\": \"textpart\",
-            \"data\": \"Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve\"
+            ""sub_type"": ""textpart"",
+            ""data"": ""Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
         }
     ],
-    \"type\": \"sms\",
-    \"attributes\": {
-            \"mask\": \"ACKOACKO\"
+    ""type"": ""sms"",
+    ""attributes"": {
+            ""mask"": ""ACKOACKO""
     },
-    \"sample_context_data\": {
-            \"name\": \"test\"
+    ""sample_context_data"": {
+            ""name"": ""test""
     }
 }",10,100,0,2,400
 "{
-    \"name\": \"testEmail\",
-    \"sub_template\": [
+    ""name"": ""testEmail"",
+    ""sub_template"": [
         {
-            \"sub_type\": \"subject\",
-            \"data\": \"{{name}} is my favourite subject\"
+            ""sub_type"": ""subject"",
+            ""data"": ""{{name}} is my favourite subject""
         },
         {
-            \"sub_type\": \"htmlpart\",
-            \"data\": \"<h1>Hello Acko</h1>\"
+            ""sub_type"": ""htmlpart"",
+            ""data"": ""<h1>Hello Acko</h1>""
         },
     ],
-    \"type\": \"email\",
-    \"attributes\": {
-            \"mask\": \"ACKO\"
+    ""type"": ""email"",
+    ""attributes"": {
+            ""mask"": ""ACKO""
     },
-    \"sample_context_data\": {
-            \"name\": \"text\"
+    ""sample_context_data"": {
+            ""name"": ""text""
     }
 }","{
-    \"name\": \"testSMS\",
-    \"sub_template\": [
+    ""name"": ""testSMS"",
+    ""sub_template"": [
         {
-            \"sub_type\": \"htmlpart\",
-            \"data\": \"{{name}} is my favourite subject\"
+            ""sub_type"": ""htmlpart"",
+            ""data"": ""{{name}} is my favourite subject""
         },
         {
-            \"sub_type\": \"textpart\",
-            \"data\": \"Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve\"
+            ""sub_type"": ""textpart"",
+            ""data"": ""Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
         }
     ],
-    \"type\": \"sms\",
-    \"attributes\": {
-            \"mask\": \"ACKOACKO\"
+    ""type"": ""sms"",
+    ""attributes"": {
+            ""mask"": ""ACKOACKO""
     },
-    \"sample_context_data\": {
-            \"name\": \"test\"
+    ""sample_context_data"": {
+            ""name"": ""test""
     }
 }",10,100,0,2,400
 "{
-    \"name\": \"testEmail\",
-    \"sub_template\": [
+    ""name"": ""testEmail"",
+    ""sub_template"": [
         {
-            \"sub_type\": \"subject\",
-            \"data\": \"{{name}} is my favourite subject\"
+            ""sub_type"": ""subject"",
+            ""data"": ""{{name}} is my favourite subject""
         },
         {
-            \"sub_type\": \"htmlpart\",
-            \"data\": \"<h1>Hello Acko</h1>\"
+            ""sub_type"": ""htmlpart"",
+            ""data"": ""<h1>Hello Acko</h1>""
         },
         {
-            \"sub_type\": \"textpart\",
-            \"data\": \"Welcome Home to template service\"
+            ""sub_type"": ""textpart"",
+            ""data"": ""Welcome Home to template service""
         },
         {
-            \"sub_type\": \"informationpart\",
-            \"data\": \"Welcome to Acko\"
+            ""sub_type"": ""informationpart"",
+            ""data"": ""Welcome to Acko""
         }
     ],
-    \"type\": \"email\",
-    \"attributes\": {
-            \"mask\": \"ACKO\"
+    ""type"": ""email"",
+    ""attributes"": {
+            ""mask"": ""ACKO""
     },
-    \"sample_context_data\": {
-            \"name\": \"text\"
+    ""sample_context_data"": {
+            ""name"": ""text""
     }
 }","{
-    \"name\": \"testSMS\",
-    \"sub_template\": [
+    ""name"": ""testSMS"",
+    ""sub_template"": [
         {
-            \"sub_type\": \"textpart\",
-            \"data\": \"Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve\"
+            ""sub_type"": ""textpart"",
+            ""data"": ""Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
         },
         {
-            \"sub_type\": \"mepart\",
-            \"data\": \"Who isMe.\"
+            ""sub_type"": ""mepart"",
+            ""data"": ""Who isMe.""
         },
     ],
-    \"type\": \"sms\",
-    \"attributes\": {
-            \"mask\": \"ACKOACKO\"
+    ""type"": ""sms"",
+    ""attributes"": {
+            ""mask"": ""ACKOACKO""
     },
-    \"sample_context_data\": {
-            \"name\": \"test\"
+    ""sample_context_data"": {
+            ""name"": ""test""
     }
 }",10,100,0,2,400
 "{
-    \"name\": \"testEmail\",
-    \"sub_template\": [
+    ""name"": ""testEmail"",
+    ""sub_template"": [
         {
-            \"sub_type\": \"subject\",
-            \"data\": \"{{name}} is my favourite subject\"
+            ""sub_type"": ""subject"",
+            ""data"": ""{{name}} is my favourite subject""
         },
         {
-            \"sub_type\": \"htmlpart\",
-            \"data\": \"<h1>Hello Acko</h1>\"
+            ""sub_type"": ""htmlpart"",
+            ""data"": ""<h1>Hello Acko</h1>""
         },
         {
-            \"sub_type\": \"textpart\",
-            \"data\": \"Welcome Home to template service\"
+            ""sub_type"": ""textpart"",
+            ""data"": ""Welcome Home to template service""
         },
         {
-            \"sub_type\": \"\",
-            \"data\": \"Welcome to Acko\"
+            ""sub_type"": """",
+            ""data"": ""Welcome to Acko""
         }
     ],
-    \"type\": \"email\",
-    \"attributes\": {
-            \"mask\": \"ACKO\"
+    ""type"": ""email"",
+    ""attributes"": {
+            ""mask"": ""ACKO""
     },
-    \"sample_context_data\": {
-            \"name\": \"text\"
+    ""sample_context_data"": {
+            ""name"": ""text""
     }
 }","{
-    \"name\": \"testSMS\",
-    \"sub_template\": [
+    ""name"": ""testSMS"",
+    ""sub_template"": [
         {
-            \"sub_type\": \"textpart\",
-            \"data\": \"Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve\"
+            ""sub_type"": ""textpart"",
+            ""data"": ""Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
         },
         {
-            \"sub_type\": \"\",
-            \"data\": \"Who isMe.\"
+            ""sub_type"": """",
+            ""data"": ""Who isMe.""
         },
     ],
-    \"type\": \"sms\",
-    \"attributes\": {
-            \"mask\": \"ACKOACKO\"
+    ""type"": ""sms"",
+    ""attributes"": {
+            ""mask"": ""ACKOACKO""
     },
-    \"sample_context_data\": {
-            \"name\": \"test\"
+    ""sample_context_data"": {
+            ""name"": ""test""
     }
 }",10,100,0,2,400
 "{
-    \"name\": \"testEmail\",
-    \"sub_template\": [
+    ""name"": ""testEmail"",
+    ""sub_template"": [
         {
-            \"sub_type\": \"subject\",
-            \"data\": \"{{name}} is my favourite subject\"
+            ""sub_type"": ""subject"",
+            ""data"": ""{{name}} is my favourite subject""
         },
         {
-            \"sub_type\": \"htmlpart\",
-            \"data\": \"<h1>Hello Acko</h1>\"
+            ""sub_type"": ""htmlpart"",
+            ""data"": ""<h1>Hello Acko</h1>""
         },
         {
-            \"sub_type\": \"textpart\",
-            \"data\": \"Welcome Home to template service\"
+            ""sub_type"": ""textpart"",
+            ""data"": ""Welcome Home to template service""
         }
     ],
-    \"type\": \"email\",
-    \"sample_context_data\": {
-            \"name\": \"text\"
+    ""type"": ""email"",
+    ""sample_context_data"": {
+            ""name"": ""text""
     }
 }","{
-    \"name\": \"testSMS\",
-    \"sub_template\": [
+    ""name"": ""testSMS"",
+    ""sub_template"": [
         {
-            \"sub_type\": \"textpart\",
-            \"data\": \"Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve\"
+            ""sub_type"": ""textpart"",
+            ""data"": ""Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
         }
     ],
-    \"type\": \"sms\",
-    \"sample_context_data\": {
-            \"name\": \"test\"
+    ""type"": ""sms"",
+    ""sample_context_data"": {
+            ""name"": ""test""
     }
 }",10,100,0,2,201
 "{
-    \"name\": \"testEmail\",
-    \"sub_template\": [
+    ""name"": ""testEmail"",
+    ""sub_template"": [
         {
-            \"sub_type\": \"subject\",
-            \"data\": \"{{name}} is my favourite subject\"
+            ""sub_type"": ""subject"",
+            ""data"": ""{{name}} is my favourite subject""
         },
         {
-            \"sub_type\": \"htmlpart\",
-            \"data\": \"<h1>Hello Acko</h1>\"
+            ""sub_type"": ""htmlpart"",
+            ""data"": ""<h1>Hello Acko</h1>""
         },
         {
-            \"sub_type\": \"textpart\",
-            \"data\": \"Welcome Home to template service\"
+            ""sub_type"": ""textpart"",
+            ""data"": ""Welcome Home to template service""
         }
     ],
-    \"type\": \"email\",
-    \"attributes\": {
-            \"mask\": \"ACKO\"
+    ""type"": ""email"",
+    ""attributes"": {
+            ""mask"": ""ACKO""
     }
 }","{
-    \"name\": \"testSMS\",
-    \"sub_template\": [
+    ""name"": ""testSMS"",
+    ""sub_template"": [
         {
-            \"sub_type\": \"textpart\",
-            \"data\": \"Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve\"
+            ""sub_type"": ""textpart"",
+            ""data"": ""Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
         }
     ],
-    \"type\": \"sms\",
-    \"attributes\": {
-            \"mask\": \"ACKOACKO\"
+    ""type"": ""sms"",
+    ""attributes"": {
+            ""mask"": ""ACKOACKO""
     }
 }",10,100,0,2,400
