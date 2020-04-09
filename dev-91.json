@@ -1,0 +1,89 @@
+{
+	"id": "63ed803e-293e-42ef-847d-b71c30cbd3cb",
+	"name": "dev-91",
+	"values": [
+		{
+			"key": "url",
+			"value": "http://172.31.32.91",
+			"enabled": true
+		},
+		{
+			"key": "UserServiceURL",
+			"value": "http://entity-service-uat-1.ap-south-1.elasticbeanstalk.com",
+			"enabled": true
+		},
+		{
+			"key": "count_email",
+			"value": 529,
+			"enabled": true
+		},
+		{
+			"key": "response_time_average_email",
+			"value": 297.22117202268424,
+			"enabled": true
+		},
+		{
+			"key": "count_sms",
+			"value": 524,
+			"enabled": true
+		},
+		{
+			"key": "response_time_average_sms",
+			"value": 247.12404580152662,
+			"enabled": true
+		},
+		{
+			"key": "max_sms_time",
+			"value": 5833,
+			"enabled": true
+		},
+		{
+			"key": "min_sms_time",
+			"value": 68,
+			"enabled": true
+		},
+		{
+			"key": "max_email_time",
+			"value": 8059,
+			"enabled": true
+		},
+		{
+			"key": "min_email_time",
+			"value": 66,
+			"enabled": true
+		},
+		{
+			"key": "responseTimeSMS",
+			"value": 143,
+			"enabled": true
+		},
+		{
+			"key": "EmailVersionName",
+			"value": null,
+			"enabled": true
+		},
+		{
+			"key": "EmailVersionNumber",
+			"value": null,
+			"enabled": true
+		},
+		{
+			"key": "SMSVersionName",
+			"value": null,
+			"enabled": true
+		},
+		{
+			"key": "SMSVersionNumber",
+			"value": null,
+			"enabled": true
+		},
+		{
+			"key": "responseTimeEMAIL",
+			"value": 409,
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2020-04-09T07:16:27.100Z",
+	"_postman_exported_using": "Postman/7.21.2"
+}

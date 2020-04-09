@@ -1,0 +1,529 @@
+{
+	"info": {
+		"_postman_id": "f07bbf90-f757-408f-8791-d4d2c4585980",
+		"name": "TemplateService - Automate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Template - Email",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "edcff57f-01dc-4a5c-afc7-ed7456c0344c",
+						"exec": [
+							"console.log(responseBody);",
+							"let res = JSON.parse(responseBody);",
+							"",
+							"pm.environment.set(\"EmailVersionNumber\",res.version);",
+							"pm.environment.set(\"EmailVersionName\", res.name);",
+							"",
+							"var temp = pm.variables.get(\"expected\");",
+							"",
+							"pm.test(\"Status code to Check \" + temp, function () {",
+							"    pm.response.to.have.status(temp);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c0431137-da6b-47e0-93be-6ca58cac7a9c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{{CreateTemplateEmail}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/templatestore/api/v1/template?expected={{expected}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"templatestore",
+						"api",
+						"v1",
+						"template"
+					],
+					"query": [
+						{
+							"key": "expected",
+							"value": "{{expected}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Template - SMS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "54bf9fe2-9306-4508-a62d-fc8edf5da5bb",
+						"exec": [
+							"let res = JSON.parse(responseBody);",
+							"",
+							"pm.environment.set(\"SMSVersionNumber\",res.version);",
+							"pm.environment.set(\"SMSVersionName\", res.name);",
+							"",
+							"var temp = pm.variables.get(\"expected\");",
+							"",
+							"pm.test(\"Status code to Check \" + temp, function () {",
+							"    pm.response.to.have.status(temp);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{{CreateTemplateSMS}}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/templatestore/api/v1/template?expected={{expected}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"templatestore",
+						"api",
+						"v1",
+						"template"
+					],
+					"query": [
+						{
+							"key": "expected",
+							"value": "{{expected}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all Templates",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6229bdb2-0fdb-40df-8aab-13e62c2763a4",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/templatestore/api/v1/templates?offset={{offsetAll}}&limit={{limitAll}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"templatestore",
+						"api",
+						"v1",
+						"templates"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "{{offsetAll}}"
+						},
+						{
+							"key": "limit",
+							"value": "{{limitAll}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-template config",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f6f8214b-5622-4dc5-9b5c-3a49a85cc2c6",
+						"exec": [
+							"let res = JSON.parse(responseBody)",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    ",
+							"    // pm.sendRequest(\"http://127.0.0.1:8000/template/_table/templatestore_template_config\", function (err, response) {",
+							"    //     let offset=0, limit=1000000;",
+							"    //     if(pm.request.url.query.get(\"offset\"))",
+							"    //         offset = pm.request.url.query.get(\"offset\");",
+							"    //     if(pm.request.url.query.get(\"limit\"))",
+							"    //         limit = pm.request.url.query.get(\"limit\");",
+							"    //     let arr = (response.json().data).slice(offset,offset+limit);",
+							"    //     let flag=true",
+							"    //     for(let i=0;i<arr.length;i++) {",
+							"    //         let temp_arr = res[arr[i].type].sub_type",
+							"    //         let temp_flag=false",
+							"    //         for(let j=0;j<temp_arr.length;j++) {",
+							"    //             if(temp_arr[j].type==arr[i].sub_type) temp_flag=true",
+							"    //         }",
+							"    //         if(!temp_flag) flag=false",
+							"    //     }",
+							"        ",
+							"    //     pm.test(\"All data values are present in database\", function() {",
+							"    //         pm.expect(flag).to.equal(true);  ",
+							"    //     });",
+							"    // });",
+							"    ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/templatestore/api/v1/config?offset={{offsetConfig}}&limit={{limitConfig}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"templatestore",
+						"api",
+						"v1",
+						"config"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "{{offsetConfig}}"
+						},
+						{
+							"key": "limit",
+							"value": "{{limitConfig}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all Versions of template",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7febe3da-5769-4285-becf-68c3d8062c11",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/templatestore/api/v1/template/:templateName/versions",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"templatestore",
+						"api",
+						"v1",
+						"template",
+						":templateName",
+						"versions"
+					],
+					"variable": [
+						{
+							"key": "templateName",
+							"value": "{{EmailVersionName}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-rendered templates",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a3ca1bbf-9b85-42fb-90a2-4f769e890fd2",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"context_data\": {\n    \"name\": \"text\",\n    \"Team\": \"Acko\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/templatestore/api/v1/template/:templateName/render",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"templatestore",
+						"api",
+						"v1",
+						"template",
+						":templateName",
+						"render"
+					],
+					"variable": [
+						{
+							"key": "templateName",
+							"value": "{{EmailVersionName}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-rendered versioned template",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d72060dd-5665-4fb1-906e-913ff2d59ff1",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"context_data\": {\n    \"name\": \"text\",\n    \"Team\": \"Acko\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/templatestore/api/v1/template/:templateName/:templateVerison/render",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"templatestore",
+						"api",
+						"v1",
+						"template",
+						":templateName",
+						":templateVerison",
+						"render"
+					],
+					"variable": [
+						{
+							"key": "templateName",
+							"value": "{{EmailVersionName}}",
+							"type": "string"
+						},
+						{
+							"key": "templateVerison",
+							"value": "{{EmailVersionNumber}}",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-template details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "33cb5486-57c5-49a8-bca7-dc1d265d928c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/templatestore/api/v1/template/:templateName/:templateVerison",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"templatestore",
+						"api",
+						"v1",
+						"template",
+						":templateName",
+						":templateVerison"
+					],
+					"variable": [
+						{
+							"key": "templateName",
+							"value": "{{EmailVersionName}}",
+							"type": "string"
+						},
+						{
+							"key": "templateVerison",
+							"value": "{{EmailVersionNumber}}",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post-new version with this one as default",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bb28e426-fee1-4d79-9570-da9c17090666",
+						"exec": [
+							"if(pm.variables.get(\"EmailVersionName\")) {",
+							"    pm.test(\"Status code is 200\", function () {",
+							"        pm.response.to.have.status(200);",
+							"    });",
+							"    pm.test(\"default value to be true\", function () {",
+							"        var jsonData = pm.response.json();",
+							"        pm.expect(jsonData.default).to.eql(true);",
+							"    });",
+							"}",
+							"else {",
+							"    pm.test(\"Status code is 403\", function () {",
+							"        pm.response.to.have.status(403);",
+							"    });",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"default\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/templatestore/api/v1/template/:templateName/:templateVerison",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"templatestore",
+						"api",
+						"v1",
+						"template",
+						":templateName",
+						":templateVerison"
+					],
+					"variable": [
+						{
+							"key": "templateName",
+							"value": "{{EmailVersionName}}",
+							"type": "string"
+						},
+						{
+							"key": "templateVerison",
+							"value": "{{EmailVersionNumber}}",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
