@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Project for Storing Postman tests",
   "scripts": {
-    "templateService-test": "newman run tests/TemplateService-Automate.postman_collection.json -d data/data-templateService.csv -e environment/dev-91.json --reporters cli,junit,html --reporter-junit-export newman/templateService.xml --reporter-html-export newman/templateService.html"
+    "templateService-test": "newman run tests/TemplateService-Automate.postman_collection.json -d data/data-templateService.csv -e environment/dev-91.json --reporters cli,junit,html --reporter-junit-export newman/templateServicexml.xml --reporter-html-export newman/templateServicehtml.html"
   },
   "author": "Kishank Patel",
   "dependencies": {
