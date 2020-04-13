@@ -7,9 +7,9 @@ def main(argv):
     test = argv[0].lower()
 
     switcher = {
-        "templateservice": "newman run TemplateService-Automate.postman_collection.json -d data.csv"
+        "templateservice": "npm run templateService-test"
     }
-    
+    os.system("npm install")
     os.system(switcher.get(test,"echo No such job"))
 
 if __name__ == "__main__":
