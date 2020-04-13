@@ -10,6 +10,7 @@ def main(argv):
         "templateservice": "npm run templateService-test"
     }
     os.system("npm install")
+    os.system("npm i -g newman-reporter-html")
     os.system(switcher.get(test,"echo No such job"))
 
 if __name__ == "__main__":
