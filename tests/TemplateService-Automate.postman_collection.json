@@ -21,7 +21,7 @@
 							"",
 							"var temp = pm.variables.get(\"expected\");",
 							"",
-							"pm.test(\"Status code to Check \" + temp, function () {",
+							"pm.test(\"Is Status code \" + temp + \"?\", function () {",
 							"    pm.response.to.have.status(temp);",
 							"});"
 						],
@@ -92,7 +92,7 @@
 							"",
 							"var temp = pm.variables.get(\"expected\");",
 							"",
-							"pm.test(\"Status code to Check \" + temp, function () {",
+							"pm.test(\"Is Status code \" + temp + \"?\", function () {",
 							"    pm.response.to.have.status(temp);",
 							"});",
 							"",
@@ -146,7 +146,7 @@
 					"script": {
 						"id": "6229bdb2-0fdb-40df-8aab-13e62c2763a4",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
+							"pm.test(\"Is Status code 200?\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});"
 						],
@@ -192,7 +192,7 @@
 						"exec": [
 							"let res = JSON.parse(responseBody)",
 							"",
-							"pm.test(\"Status code is 200\", function () {",
+							"pm.test(\"Is Status code 200?\", function () {",
 							"    pm.response.to.have.status(200);",
 							"    ",
 							"    // pm.sendRequest(\"http://127.0.0.1:8000/template/_table/templatestore_template_config\", function (err, response) {",
@@ -259,7 +259,7 @@
 					"script": {
 						"id": "7febe3da-5769-4285-becf-68c3d8062c11",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
+							"pm.test(\"Is Status code 200?\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});"
 						],
@@ -301,7 +301,7 @@
 					"script": {
 						"id": "a3ca1bbf-9b85-42fb-90a2-4f769e890fd2",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
+							"pm.test(\"Is Status code 200?\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});"
 						],
@@ -355,7 +355,7 @@
 					"script": {
 						"id": "d72060dd-5665-4fb1-906e-913ff2d59ff1",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
+							"pm.test(\"Is Status code 200?\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});"
 						],
@@ -416,7 +416,7 @@
 					"script": {
 						"id": "33cb5486-57c5-49a8-bca7-dc1d265d928c",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
+							"pm.test(\"Is Status code 200?\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});"
 						],
@@ -465,16 +465,16 @@
 						"id": "bb28e426-fee1-4d79-9570-da9c17090666",
 						"exec": [
 							"if(pm.variables.get(\"EmailVersionName\")) {",
-							"    pm.test(\"Status code is 200\", function () {",
+							"    pm.test(\"Is Status code 200?\", function () {",
 							"        pm.response.to.have.status(200);",
 							"    });",
-							"    pm.test(\"default value to be true\", function () {",
+							"    pm.test(\"Default Version created or not.\", function () {",
 							"        var jsonData = pm.response.json();",
 							"        pm.expect(jsonData.default).to.eql(true);",
 							"    });",
 							"}",
 							"else {",
-							"    pm.test(\"Status code is 403\", function () {",
+							"    pm.test(\"Is Status code 403?\", function () {",
 							"        pm.response.to.have.status(403);",
 							"    });",
 							"}"
