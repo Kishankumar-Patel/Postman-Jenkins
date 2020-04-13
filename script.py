@@ -5,7 +5,7 @@ import sys
 def main(argv):
 
     test = argv[0].lower()
-
+    print(f"*****************************Job Triggered is {test.upper()} *****************************")
     switcher = {
         "templateservice": "npm run templateService-test"
     }
