@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "9a82e617-e2b2-4535-af7b-7d065a579530",
+		"name": "CommunicationService-Automate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "call template-sms",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "63254699-f596-470d-83ec-5777fdd450d5",
+						"exec": [
+							"let res = JSON.parse(responseBody);",
+							"",
+							"if(request.data.length!==undefined) {",
+							"",
+							"    pm.environment.set(\"responseTimeSMS\", pm.response.responseTime);",
+							"    ",
+							"    var temp = parseInt(pm.variables.get(\"expectedSMS\"),10);",
+							"    pm.test(\"Status code is \" + temp, function () {",
+							"        pm.response.to.have.status(temp);",
+							"        pm.sendRequest(\"https://postman-echo.com/delay/1\", function (err, response) {",
+							"            if(temp===200) {",
+							"                pm.sendRequest(\"http://lb-internal-ackommunication-dev.acko.in/api/status?request_id=\"+res.request_id, function (err, response) {",
+							"                    let str = \"Sent Succesfully to Provider.\";",
+							"                    if(pm.variables.get(\"statusSMS\") !== \"SENT_TO_PROVIDER\") str = \"Failed to send to the Provider.\"",
+							"                    pm.test(str, function() {",
+							"                        if(response.json().message) ",
+							"                            pm.expect(response.json().success).to.equal(false);  ",
+							"                        else pm.expect(response.json().recipients[0].status).to.equal(pm.variables.get(\"statusSMS\"));  ",
+							"                    });",
+							"                });",
+							"            }",
+							"        });",
+							"    });",
+							"    ",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "8e66a8c1-f2f2-4dac-9fe8-630eeb2c2d7b",
+						"exec": [
+							"pm.globals.set(\"phone_number\",\"1231231231\")"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{{callCommunicationSMS}}"
+				},
+				"url": {
+					"raw": "http://lb-internal-ackommunication-dev.acko.in/api/v1/sms/send",
+					"protocol": "http",
+					"host": [
+						"lb-internal-ackommunication-dev",
+						"acko",
+						"in"
+					],
+					"path": [
+						"api",
+						"v1",
+						"sms",
+						"send"
+					],
+					"query": [
+						{
+							"key": "expected",
+							"value": "{{expectedSMS}}",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "{{statusSMS}}",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "call template-email",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b3633280-72f3-4370-bab7-4c94810b85d2",
+						"exec": [
+							"let res = JSON.parse(responseBody);",
+							"",
+							"if(request.data.length!==undefined) {",
+							"",
+							"    pm.environment.set(\"responseTimeEMAIL\", pm.response.responseTime);",
+							"    ",
+							"    var temp = parseInt(pm.variables.get(\"expectedEMAIL\"),10);",
+							"    pm.test(\"Status code is \" + temp, function () {",
+							"        pm.response.to.have.status(temp);",
+							"        pm.sendRequest(\"https://postman-echo.com/delay/1\", function (err, response) {",
+							"            if(temp===200) {",
+							"                pm.sendRequest(\"http://lb-internal-ackommunication-dev.acko.in/api/status?request_id=\"+res.request_id, function (err, response) {",
+							"                    let str = \"Sent Succesfully to Provider.\";",
+							"                    if(pm.variables.get(\"statusEMAIL\") !== \"SENT_TO_PROVIDER\") str = \"Failed to send to the Provider.\"",
+							"                    pm.test(str, function() {",
+							"                        pm.expect(response.json().status).to.equal(pm.variables.get(\"statusEMAIL\"));  ",
+							"                    });",
+							"                });",
+							"            }",
+							"        });",
+							"    });",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b3c1b8bd-d453-4854-b418-506772635c44",
+						"exec": [
+							"pm.globals.set(\"to_email\", \"internetola@acko.tech\")"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{{callCommunicationeEMAIL}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://lb-internal-ackommunication-dev.acko.in/api/v1/email/send",
+					"protocol": "http",
+					"host": [
+						"lb-internal-ackommunication-dev",
+						"acko",
+						"in"
+					],
+					"path": [
+						"api",
+						"v1",
+						"email",
+						"send"
+					],
+					"query": [
+						{
+							"key": "expected",
+							"value": "{{expectedEMAIL}}",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "{{statusEMAIL}}",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
