@@ -4,7 +4,8 @@
   "description": "Project for Storing Postman tests",
   "scripts": {
     "templateService-test": "newman run tests/TemplateService-Automate.postman_collection.json -d data/data-templateService.csv -e environment/dev-91.json --reporters cli,junit,html --reporter-junit-export newman/templateService-test-xml.xml --reporter-html-export newman/templateService-test-html.html",
-    "communicationService-test": "newman run tests/CommunicationService-Automate.postman_collection.json -d data/data-communicationService.csv -e environment/dev-91.json --reporters cli,junit,html --reporter-junit-export newman/communicationService-test-xml.xml --reporter-html-export newman/communicationService-test-html.html"
+    "communicationService-test": "newman run tests/CommunicationService-Automate.postman_collection.json -d data/data-communicationService.csv -e environment/dev-91.json --reporters cli,junit,html --reporter-junit-export newman/communicationService-test-xml.xml --reporter-html-export newman/communicationService-test-html.html",
+    "userService-test": "newman run tests/UserService-Automate.postman_collection.json -d data/data-userService.csv -e environment/dev-91.json --reporters cli,junit,html --reporter-junit-export newman/userService-test-xml.xml --reporter-html-export newman/userService-test-html.html"
   },
   "author": "Kishank Patel",
   "dependencies": {
