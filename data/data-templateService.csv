@@ -4,15 +4,15 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     ""sub_templates"": [
         {
             ""sub_type"": ""subject"",
-            ""data"": ""{{name}} is my favourite subject""
+            ""data"": ""e3tuYW1lfX0gaXMgbXkgZmF2b3VyaXRlIHN1YmplY3Q=""
         },
         {
             ""sub_type"": ""htmlpart"",
-            ""data"": ""<h1>Hello Acko</h1>""
+            ""data"": ""PGgxPkhlbGxvIEFja288L2gxPg==""
         },
         {
             ""sub_type"": ""textpart"",
-            ""data"": ""Welcome Home to template service""
+            ""data"": ""V2VsY29tZSBIb21lIHRvIHRlbXBsYXRlIHNlcnZpY2U=""
         }
     ],
     ""type"": ""email"",
@@ -27,15 +27,15 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     ""sub_templates"": [
         {
             ""sub_type"": ""textpart"",
-            ""data"": ""Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
+            ""data"": ""SG9wIG9uIHlvdXIgRHVuem8gcmlkZSB3b3JyeS1mcmVlISBZb3VyIHRyaXAgaXMgaW5zdXJlZCBieSBBY2tvLCBhbmQgeW91J3JlIGNvdmVyZWQgYWdhaW5zdCBhY2NpZGVudHMsIGluanVyaWVzIGFuZCBvdGhlciBzdWNoIHJpc2tzLiBLbm93IG1vcmUgYWJvdXQgeW91ciBwb2xpY3kgaGVyZTogaHR0cHM6Ly9hY2tvLmNvbS9wb2xpY3kvP3BpZD14M2xEcWhGYVVvNVhHelN5YWRza2xqYThsdyZzb3VyY2U9c2VsZnNlcnZl""
         }
     ],
     ""type"": ""sms"",
     ""attributes"": {
-    	""mask"": ""ACKOACKO""
+            ""mask"": ""ACKOACKO""
     },
     ""sample_context_data"": {
-    	""name"": ""test""
+            ""name"": ""test""
     }
 }",10,100,0,2,201
 "{
@@ -43,15 +43,15 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     ""sub_templates"": [
         {
             ""sub_type"": ""subject"",
-            ""data"": ""{{name}} is my favourite subject""
+            ""data"": ""e3tuYW1lfX0gaXMgbXkgZmF2b3VyaXRlIHN1YmplY3Q=""
         },
         {
             ""sub_type"": ""htmlpart"",
-            ""data"": ""<h1>Hello Acko</h1>""
+            ""data"": ""PGgxPkhlbGxvIEFja288L2gxPg==""
         },
         {
             ""sub_type"": ""textpart"",
-            ""data"": ""Welcome Home to template service""
+            ""data"": ""V2VsY29tZSBIb21lIHRvIHRlbXBsYXRlIHNlcnZpY2U=""
         }
     ],
     ""type"": ""email"",
@@ -66,7 +66,7 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     ""sub_templates"": [
         {
             ""sub_type"": ""textpart"",
-            ""data"": ""Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
+            ""data"": ""SG9wIG9uIHlvdXIgRHVuem8gcmlkZSB3b3JyeS1mcmVlISBZb3VyIHRyaXAgaXMgaW5zdXJlZCBieSBBY2tvLCBhbmQgeW91J3JlIGNvdmVyZWQgYWdhaW5zdCBhY2NpZGVudHMsIGluanVyaWVzIGFuZCBvdGhlciBzdWNoIHJpc2tzLiBLbm93IG1vcmUgYWJvdXQgeW91ciBwb2xpY3kgaGVyZTogaHR0cHM6Ly9hY2tvLmNvbS9wb2xpY3kvP3BpZD14M2xEcWhGYVVvNVhHelN5YWRza2xqYThsdyZzb3VyY2U9c2VsZnNlcnZl""
         }
     ],
     ""type"": ""sms"",
@@ -101,11 +101,11 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     ""sub_templates"": [
         {
             ""sub_type"": ""htmlpart"",
-            ""data"": ""<h1>Hello Acko</h1>""
+            ""data"": ""PGgxPkhlbGxvIEFja288L2gxPg==""
         },
         {
             ""sub_type"": ""textpart"",
-            ""data"": ""Welcome Home to template service""
+            ""data"": ""V2VsY29tZSBIb21lIHRvIHRlbXBsYXRlIHNlcnZpY2U=""
         }
     ],
     ""type"": ""email"",
@@ -133,11 +133,11 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     ""sub_templates"": [
         {
             ""sub_type"": ""subject"",
-            ""data"": ""{{name}} is my favourite subject""
+            ""data"": ""e3tuYW1lfX0gaXMgbXkgZmF2b3VyaXRlIHN1YmplY3Q=""
         },
         {
             ""sub_type"": ""textpart"",
-            ""data"": ""Welcome Home to template service""
+            ""data"": ""V2VsY29tZSBIb21lIHRvIHRlbXBsYXRlIHNlcnZpY2U=""
         }
     ],
     ""type"": ""email"",
@@ -152,11 +152,11 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     ""sub_templates"": [
         {
             ""sub_type"": ""subject"",
-            ""data"": ""{{name}} is my favourite subject""
+            ""data"": ""e3tuYW1lfX0gaXMgbXkgZmF2b3VyaXRlIHN1YmplY3Q=""
         },
         {
             ""sub_type"": ""textpart"",
-            ""data"": ""Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
+            ""data"": ""SG9wIG9uIHlvdXIgRHVuem8gcmlkZSB3b3JyeS1mcmVlISBZb3VyIHRyaXAgaXMgaW5zdXJlZCBieSBBY2tvLCBhbmQgeW91J3JlIGNvdmVyZWQgYWdhaW5zdCBhY2NpZGVudHMsIGluanVyaWVzIGFuZCBvdGhlciBzdWNoIHJpc2tzLiBLbm93IG1vcmUgYWJvdXQgeW91ciBwb2xpY3kgaGVyZTogaHR0cHM6Ly9hY2tvLmNvbS9wb2xpY3kvP3BpZD14M2xEcWhGYVVvNVhHelN5YWRza2xqYThsdyZzb3VyY2U9c2VsZnNlcnZl""
         }
     ],
     ""type"": ""sms"",
@@ -172,12 +172,12 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     ""sub_templates"": [
         {
             ""sub_type"": ""subject"",
-            ""data"": ""{{name}} is my favourite subject""
+            ""data"": ""e3tuYW1lfX0gaXMgbXkgZmF2b3VyaXRlIHN1YmplY3Q=""
         },
         {
             ""sub_type"": ""htmlpart"",
-            ""data"": ""<h1>Hello Acko</h1>""
-        },
+            ""data"": ""PGgxPkhlbGxvIEFja288L2gxPg==""
+        }
     ],
     ""type"": ""email"",
     ""attributes"": {
@@ -191,11 +191,11 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     ""sub_templates"": [
         {
             ""sub_type"": ""htmlpart"",
-            ""data"": ""{{name}} is my favourite subject""
+            ""data"": ""e3tuYW1lfX0gaXMgbXkgZmF2b3VyaXRlIHN1YmplY3Q=""
         },
         {
             ""sub_type"": ""textpart"",
-            ""data"": ""Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
+            ""data"": ""SG9wIG9uIHlvdXIgRHVuem8gcmlkZSB3b3JyeS1mcmVlISBZb3VyIHRyaXAgaXMgaW5zdXJlZCBieSBBY2tvLCBhbmQgeW91J3JlIGNvdmVyZWQgYWdhaW5zdCBhY2NpZGVudHMsIGluanVyaWVzIGFuZCBvdGhlciBzdWNoIHJpc2tzLiBLbm93IG1vcmUgYWJvdXQgeW91ciBwb2xpY3kgaGVyZTogaHR0cHM6Ly9hY2tvLmNvbS9wb2xpY3kvP3BpZD14M2xEcWhGYVVvNVhHelN5YWRza2xqYThsdyZzb3VyY2U9c2VsZnNlcnZl""
         }
     ],
     ""type"": ""sms"",
@@ -211,15 +211,15 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     ""sub_templates"": [
         {
             ""sub_type"": ""subject"",
-            ""data"": ""{{name}} is my favourite subject""
+            ""data"": ""e3tuYW1lfX0gaXMgbXkgZmF2b3VyaXRlIHN1YmplY3Q=""
         },
         {
             ""sub_type"": ""htmlpart"",
-            ""data"": ""<h1>Hello Acko</h1>""
+            ""data"": ""PGgxPkhlbGxvIEFja288L2gxPg==""
         },
         {
             ""sub_type"": ""textpart"",
-            ""data"": ""Welcome Home to template service""
+            ""data"": ""V2VsY29tZSBIb21lIHRvIHRlbXBsYXRlIHNlcnZpY2U=""
         },
         {
             ""sub_type"": ""informationpart"",
@@ -238,12 +238,12 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     ""sub_templates"": [
         {
             ""sub_type"": ""textpart"",
-            ""data"": ""Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
+            ""data"": ""SG9wIG9uIHlvdXIgRHVuem8gcmlkZSB3b3JyeS1mcmVlISBZb3VyIHRyaXAgaXMgaW5zdXJlZCBieSBBY2tvLCBhbmQgeW91J3JlIGNvdmVyZWQgYWdhaW5zdCBhY2NpZGVudHMsIGluanVyaWVzIGFuZCBvdGhlciBzdWNoIHJpc2tzLiBLbm93IG1vcmUgYWJvdXQgeW91ciBwb2xpY3kgaGVyZTogaHR0cHM6Ly9hY2tvLmNvbS9wb2xpY3kvP3BpZD14M2xEcWhGYVVvNVhHelN5YWRza2xqYThsdyZzb3VyY2U9c2VsZnNlcnZl""
         },
         {
             ""sub_type"": ""mepart"",
-            ""data"": ""Who isMe.""
-        },
+            ""data"": ""V2hvIGlzTWUu""
+        }
     ],
     ""type"": ""sms"",
     ""attributes"": {
@@ -258,15 +258,15 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     ""sub_templates"": [
         {
             ""sub_type"": ""subject"",
-            ""data"": ""{{name}} is my favourite subject""
+            ""data"": ""e3tuYW1lfX0gaXMgbXkgZmF2b3VyaXRlIHN1YmplY3Q=""
         },
         {
             ""sub_type"": ""htmlpart"",
-            ""data"": ""<h1>Hello Acko</h1>""
+            ""data"": ""PGgxPkhlbGxvIEFja288L2gxPg==""
         },
         {
             ""sub_type"": ""textpart"",
-            ""data"": ""Welcome Home to template service""
+            ""data"": ""V2VsY29tZSBIb21lIHRvIHRlbXBsYXRlIHNlcnZpY2U=""
         },
         {
             ""sub_type"": """",
@@ -285,12 +285,12 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     ""sub_templates"": [
         {
             ""sub_type"": ""textpart"",
-            ""data"": ""Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
+            ""data"": ""SG9wIG9uIHlvdXIgRHVuem8gcmlkZSB3b3JyeS1mcmVlISBZb3VyIHRyaXAgaXMgaW5zdXJlZCBieSBBY2tvLCBhbmQgeW91J3JlIGNvdmVyZWQgYWdhaW5zdCBhY2NpZGVudHMsIGluanVyaWVzIGFuZCBvdGhlciBzdWNoIHJpc2tzLiBLbm93IG1vcmUgYWJvdXQgeW91ciBwb2xpY3kgaGVyZTogaHR0cHM6Ly9hY2tvLmNvbS9wb2xpY3kvP3BpZD14M2xEcWhGYVVvNVhHelN5YWRza2xqYThsdyZzb3VyY2U9c2VsZnNlcnZl""
         },
         {
             ""sub_type"": """",
-            ""data"": ""Who isMe.""
-        },
+            ""data"": ""V2hvIGlzTWUu""
+        }
     ],
     ""type"": ""sms"",
     ""attributes"": {
@@ -305,15 +305,15 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     ""sub_templates"": [
         {
             ""sub_type"": ""subject"",
-            ""data"": ""{{name}} is my favourite subject""
+            ""data"": ""e3tuYW1lfX0gaXMgbXkgZmF2b3VyaXRlIHN1YmplY3Q=""
         },
         {
             ""sub_type"": ""htmlpart"",
-            ""data"": ""<h1>Hello Acko</h1>""
+            ""data"": ""PGgxPkhlbGxvIEFja288L2gxPg==""
         },
         {
             ""sub_type"": ""textpart"",
-            ""data"": ""Welcome Home to template service""
+            ""data"": ""V2VsY29tZSBIb21lIHRvIHRlbXBsYXRlIHNlcnZpY2U=""
         }
     ],
     ""type"": ""email"",
@@ -325,28 +325,28 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     ""sub_templates"": [
         {
             ""sub_type"": ""textpart"",
-            ""data"": ""Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
+            ""data"": ""SG9wIG9uIHlvdXIgRHVuem8gcmlkZSB3b3JyeS1mcmVlISBZb3VyIHRyaXAgaXMgaW5zdXJlZCBieSBBY2tvLCBhbmQgeW91J3JlIGNvdmVyZWQgYWdhaW5zdCBhY2NpZGVudHMsIGluanVyaWVzIGFuZCBvdGhlciBzdWNoIHJpc2tzLiBLbm93IG1vcmUgYWJvdXQgeW91ciBwb2xpY3kgaGVyZTogaHR0cHM6Ly9hY2tvLmNvbS9wb2xpY3kvP3BpZD14M2xEcWhGYVVvNVhHelN5YWRza2xqYThsdyZzb3VyY2U9c2VsZnNlcnZl""
         }
     ],
     ""type"": ""sms"",
     ""sample_context_data"": {
             ""name"": ""test""
     }
-}",10,100,0,2,201
+}",10,100,0,2,400
 "{
     ""name"": ""testEmail"",
     ""sub_templates"": [
         {
             ""sub_type"": ""subject"",
-            ""data"": ""{{name}} is my favourite subject""
+            ""data"": ""e3tuYW1lfX0gaXMgbXkgZmF2b3VyaXRlIHN1YmplY3Q=""
         },
         {
             ""sub_type"": ""htmlpart"",
-            ""data"": ""<h1>Hello Acko</h1>""
+            ""data"": ""PGgxPkhlbGxvIEFja288L2gxPg==""
         },
         {
             ""sub_type"": ""textpart"",
-            ""data"": ""Welcome Home to template service""
+            ""data"": ""V2VsY29tZSBIb21lIHRvIHRlbXBsYXRlIHNlcnZpY2U=""
         }
     ],
     ""type"": ""email"",
@@ -358,7 +358,7 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     ""sub_templates"": [
         {
             ""sub_type"": ""textpart"",
-            ""data"": ""Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
+            ""data"": ""SG9wIG9uIHlvdXIgRHVuem8gcmlkZSB3b3JyeS1mcmVlISBZb3VyIHRyaXAgaXMgaW5zdXJlZCBieSBBY2tvLCBhbmQgeW91J3JlIGNvdmVyZWQgYWdhaW5zdCBhY2NpZGVudHMsIGluanVyaWVzIGFuZCBvdGhlciBzdWNoIHJpc2tzLiBLbm93IG1vcmUgYWJvdXQgeW91ciBwb2xpY3kgaGVyZTogaHR0cHM6Ly9hY2tvLmNvbS9wb2xpY3kvP3BpZD14M2xEcWhGYVVvNVhHelN5YWRza2xqYThsdyZzb3VyY2U9c2VsZnNlcnZl""
         }
     ],
     ""type"": ""sms"",
