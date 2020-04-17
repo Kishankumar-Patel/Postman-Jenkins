@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "f07bbf90-f757-408f-8791-d4d2c4585980",
-		"name": "TemplateService - Automate",
+		"name": "TemplateService-Automate",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -57,12 +57,11 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/templatestore/api/v1/template?expected={{expected}}",
+					"raw": "{{TemplateServiceURL}}/api/v1/template?expected={{expected}}",
 					"host": [
-						"{{url}}"
+						"{{TemplateServiceURL}}"
 					],
 					"path": [
-						"templatestore",
 						"api",
 						"v1",
 						"template"
@@ -118,12 +117,11 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/templatestore/api/v1/template?expected={{expected}}",
+					"raw": "{{TemplateServiceURL}}/api/v1/template?expected={{expected}}",
 					"host": [
-						"{{url}}"
+						"{{TemplateServiceURL}}"
 					],
 					"path": [
-						"templatestore",
 						"api",
 						"v1",
 						"template"
@@ -158,12 +156,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/templatestore/api/v1/templates?offset={{offsetAll}}&limit={{limitAll}}",
+					"raw": "{{TemplateServiceURL}}/api/v1/templates?offset={{offsetAll}}&limit={{limitAll}}",
 					"host": [
-						"{{url}}"
+						"{{TemplateServiceURL}}"
 					],
 					"path": [
-						"templatestore",
 						"api",
 						"v1",
 						"templates"
@@ -227,12 +224,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/templatestore/api/v1/config?offset={{offsetConfig}}&limit={{limitConfig}}",
+					"raw": "{{TemplateServiceURL}}/api/v1/config?offset={{offsetConfig}}&limit={{limitConfig}}",
 					"host": [
-						"{{url}}"
+						"{{TemplateServiceURL}}"
 					],
 					"path": [
-						"templatestore",
 						"api",
 						"v1",
 						"config"
@@ -271,12 +267,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/templatestore/api/v1/template/:templateName/versions",
+					"raw": "{{TemplateServiceURL}}/api/v1/template/:templateName/versions",
 					"host": [
-						"{{url}}"
+						"{{TemplateServiceURL}}"
 					],
 					"path": [
-						"templatestore",
 						"api",
 						"v1",
 						"template",
@@ -286,7 +281,8 @@
 					"variable": [
 						{
 							"key": "templateName",
-							"value": "{{EmailVersionName}}"
+							"value": "{{EmailVersionName}}",
+							"type": "string"
 						}
 					]
 				}
@@ -325,12 +321,11 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/templatestore/api/v1/template/:templateName/render",
+					"raw": "{{TemplateServiceURL}}/api/v1/template/:templateName/render",
 					"host": [
-						"{{url}}"
+						"{{TemplateServiceURL}}"
 					],
 					"path": [
-						"templatestore",
 						"api",
 						"v1",
 						"template",
@@ -379,12 +374,11 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/templatestore/api/v1/template/:templateName/:templateVerison/render",
+					"raw": "{{TemplateServiceURL}}/api/v1/template/:templateName/:templateVerison/render",
 					"host": [
-						"{{url}}"
+						"{{TemplateServiceURL}}"
 					],
 					"path": [
-						"templatestore",
 						"api",
 						"v1",
 						"template",
@@ -428,12 +422,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/templatestore/api/v1/template/:templateName/:templateVerison",
+					"raw": "{{TemplateServiceURL}}/api/v1/template/:templateName/:templateVerison",
 					"host": [
-						"{{url}}"
+						"{{TemplateServiceURL}}"
 					],
 					"path": [
-						"templatestore",
 						"api",
 						"v1",
 						"template",
@@ -496,12 +489,11 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/templatestore/api/v1/template/:templateName/:templateVerison",
+					"raw": "{{TemplateServiceURL}}/api/v1/template/:templateName/:templateVerison",
 					"host": [
-						"{{url}}"
+						"{{TemplateServiceURL}}"
 					],
 					"path": [
-						"templatestore",
 						"api",
 						"v1",
 						"template",
