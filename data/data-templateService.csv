@@ -1,7 +1,7 @@
 CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfig,expected
 "{
     ""name"": ""testEmail"",
-    ""sub_template"": [
+    ""sub_templates"": [
         {
             ""sub_type"": ""subject"",
             ""data"": ""{{name}} is my favourite subject""
@@ -24,7 +24,7 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     }
 }","{
     ""name"": ""testSMS"",
-    ""sub_template"": [
+    ""sub_templates"": [
         {
             ""sub_type"": ""textpart"",
             ""data"": ""Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
@@ -40,7 +40,7 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
 }",10,100,0,2,201
 "{
     ""name"": """",
-    ""sub_template"": [
+    ""sub_templates"": [
         {
             ""sub_type"": ""subject"",
             ""data"": ""{{name}} is my favourite subject""
@@ -63,7 +63,7 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     }
 }","{
     ""name"": """",
-    ""sub_template"": [
+    ""sub_templates"": [
         {
             ""sub_type"": ""textpart"",
             ""data"": ""Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
@@ -98,7 +98,7 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
 }",10,100,0,2,400
 "{
     ""name"": ""testEmail"",
-    ""sub_template"": [
+    ""sub_templates"": [
         {
             ""sub_type"": ""htmlpart"",
             ""data"": ""<h1>Hello Acko</h1>""
@@ -117,7 +117,7 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     }
 }","{
     ""name"": ""testSMS"",
-    ""sub_template"": [
+    ""sub_templates"": [
        
     ],
     ""type"": ""sms"",
@@ -130,7 +130,7 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
 }",10,100,0,2,400
 "{
     ""name"": ""testEmail"",
-    ""sub_template"": [
+    ""sub_templates"": [
         {
             ""sub_type"": ""subject"",
             ""data"": ""{{name}} is my favourite subject""
@@ -149,7 +149,7 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     }
 }","{
     ""name"": ""testSMS"",
-    ""sub_template"": [
+    ""sub_templates"": [
         {
             ""sub_type"": ""subject"",
             ""data"": ""{{name}} is my favourite subject""
@@ -169,7 +169,7 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
 }",10,100,0,2,400
 "{
     ""name"": ""testEmail"",
-    ""sub_template"": [
+    ""sub_templates"": [
         {
             ""sub_type"": ""subject"",
             ""data"": ""{{name}} is my favourite subject""
@@ -188,7 +188,7 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     }
 }","{
     ""name"": ""testSMS"",
-    ""sub_template"": [
+    ""sub_templates"": [
         {
             ""sub_type"": ""htmlpart"",
             ""data"": ""{{name}} is my favourite subject""
@@ -208,7 +208,7 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
 }",10,100,0,2,400
 "{
     ""name"": ""testEmail"",
-    ""sub_template"": [
+    ""sub_templates"": [
         {
             ""sub_type"": ""subject"",
             ""data"": ""{{name}} is my favourite subject""
@@ -235,7 +235,7 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     }
 }","{
     ""name"": ""testSMS"",
-    ""sub_template"": [
+    ""sub_templates"": [
         {
             ""sub_type"": ""textpart"",
             ""data"": ""Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
@@ -255,7 +255,7 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
 }",10,100,0,2,400
 "{
     ""name"": ""testEmail"",
-    ""sub_template"": [
+    ""sub_templates"": [
         {
             ""sub_type"": ""subject"",
             ""data"": ""{{name}} is my favourite subject""
@@ -282,7 +282,7 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     }
 }","{
     ""name"": ""testSMS"",
-    ""sub_template"": [
+    ""sub_templates"": [
         {
             ""sub_type"": ""textpart"",
             ""data"": ""Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
@@ -302,7 +302,7 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
 }",10,100,0,2,400
 "{
     ""name"": ""testEmail"",
-    ""sub_template"": [
+    ""sub_templates"": [
         {
             ""sub_type"": ""subject"",
             ""data"": ""{{name}} is my favourite subject""
@@ -322,7 +322,7 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     }
 }","{
     ""name"": ""testSMS"",
-    ""sub_template"": [
+    ""sub_templates"": [
         {
             ""sub_type"": ""textpart"",
             ""data"": ""Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
@@ -335,7 +335,7 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
 }",10,100,0,2,201
 "{
     ""name"": ""testEmail"",
-    ""sub_template"": [
+    ""sub_templates"": [
         {
             ""sub_type"": ""subject"",
             ""data"": ""{{name}} is my favourite subject""
@@ -355,7 +355,7 @@ CreateTemplateEmail,CreateTemplateSMS,offsetAll,limitAll,offsetConfig,limitConfi
     }
 }","{
     ""name"": ""testSMS"",
-    ""sub_template"": [
+    ""sub_templates"": [
         {
             ""sub_type"": ""textpart"",
             ""data"": ""Hop on your Dunzo ride worry-free! Your trip is insured by Acko, and you're covered against accidents, injuries and other such risks. Know more about your policy here: https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
