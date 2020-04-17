@@ -3,8 +3,8 @@
 	"name": "dev-91",
 	"values": [
 		{
-			"key": "url",
-			"value": "http://172.31.32.91",
+			"key": "TemplateServiceURL",
+			"value": "https://template-service-uat.internal.ackodev.com",
 			"enabled": true
 		},
 		{
