@@ -11,75 +11,9 @@
 			"key": "UserServiceURL",
 			"value": "http://entity-service-uat-1.ap-south-1.elasticbeanstalk.com",
 			"enabled": true
-		},
-		{
-			"key": "count_email",
-			"value": 529,
-			"enabled": true
-		},
-		{
-			"key": "response_time_average_email",
-			"value": 297.22117202268424,
-			"enabled": true
-		},
-		{
-			"key": "count_sms",
-			"value": 524,
-			"enabled": true
-		},
-		{
-			"key": "response_time_average_sms",
-			"value": 247.12404580152662,
-			"enabled": true
-		},
-		{
-			"key": "max_sms_time",
-			"value": 5833,
-			"enabled": true
-		},
-		{
-			"key": "min_sms_time",
-			"value": 68,
-			"enabled": true
-		},
-		{
-			"key": "max_email_time",
-			"value": 8059,
-			"enabled": true
-		},
-		{
-			"key": "min_email_time",
-			"value": 66,
-			"enabled": true
-		},
-		{
-			"key": "responseTimeSMS",
-			"value": 143,
-			"enabled": true
-		},
-		{
-			"key": "EmailVersionName",
-			"value": null,
-			"enabled": true
-		},
-		{
-			"key": "EmailVersionNumber",
-			"value": null,
-			"enabled": true
-		},
-		{
-			"key": "SMSVersionName",
-			"value": null,
-			"enabled": true
-		},
-		{
-			"key": "SMSVersionNumber",
-			"value": null,
-			"enabled": true
-		},
-		{
-			"key": "responseTimeEMAIL",
-			"value": 409,
+		},{
+			"key": "CommServiceURL",
+			"value": "https://communication-service.external.ackodev.com",
 			"enabled": true
 		}
 	],
