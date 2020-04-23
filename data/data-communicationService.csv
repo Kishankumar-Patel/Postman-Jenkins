@@ -1,5 +1,5 @@
-Description,,callCommunicationeEMAIL,callCommunicationSMS,expectedEMAIL,expectedSMS,statusEMAIL,statusSMS
-All valid,all valid,"{
+callCommunicationeEMAIL,callCommunicationSMS,expectedEMAIL,expectedSMS,statusEMAIL,statusSMS,callWhatsappSend,expectedSend,statusSend,callWhatsappOptIn,expectedOptIn
+"{
     ""from"": {
         ""name"": ""Test"",
         ""email"": ""internetola@acko.com""
@@ -26,8 +26,19 @@ All valid,all valid,"{
                         ""context_data"": {
                         }
                 }
-}",200,200,SENT_TO_PROVIDER,SENT_TO_PROVIDER
-Invalid name from,invalid name,"{
+}",200,200,SENT_TO_PROVIDER,SENT_TO_PROVIDER,"{
+    ""phone_number"": ""1231231112"",
+    ""template"": {
+        ""name"": ""wa_policy_toolkit"",
+        ""version"": ""0.1"",
+        ""context_data"": {
+            ""policy_link"": ""https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
+        }
+    }
+}",200,SENT_TO_PROVIDER,"{
+    ""phone_number"": ""1231231112""
+}",200
+"{
     ""from"": {
         ""name"": 123,
         ""email"": ""internetola@acko.com""
@@ -55,8 +66,19 @@ Invalid name from,invalid name,"{
                         }
                 }
 }
-",200,200,SENT_TO_PROVIDER,FAILED
-Blank name from,blank name,"{
+",200,200,SENT_TO_PROVIDER,FAILED,"{
+    ""phone_number"": ""12312312"",
+    ""template"": {
+        ""name"": ""wa_policy_toolkit"",
+        ""version"": ""0.1"",
+        ""context_data"": {
+            ""policy_link"": ""https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
+        }
+    }
+}",400,,"{
+    ""phone_number"": ""12312312""
+}",400
+"{
     ""from"": {
         ""name"": ,
         ""email"": ""internetola@acko.com""
@@ -84,8 +106,18 @@ Blank name from,blank name,"{
                         }
                 }
 }
-",400,400,,
-Invalid from email,invalid phone,"{
+",400,400,,,"{
+    ""phone_number"": ""123123111112"",
+    ""template"": {
+        ""name"": ""wa_policy_toolkit"",
+        ""version"": ""0.1"",
+        ""context_data"": {
+            ""policy_link"": ""https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
+        }
+    }
+}",400,,"{
+    ""phone_number"": ""123123111112""",400
+"{
     ""from"": {
         ""name"": ""Test"",
         ""email"": ""internet@ola@acko.in.com""
@@ -113,8 +145,19 @@ Invalid from email,invalid phone,"{
                         }
                 }
 }
-",400,400,,
-blank email,blank phone,"{
+",400,400,,,"{
+    ""phone_number"": ""Ab123#1d12"",
+    ""template"": {
+        ""name"": ""wa_policy_toolkit"",
+        ""version"": ""0.1"",
+        ""context_data"": {
+            ""policy_link"": ""https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
+        }
+    }
+}",200,FAILED,"{
+    ""phone_number"": ""Ab123#1d12""
+}",200
+"{
     ""from"": {
         ""name"": ""Test"",
         ""email"": 
@@ -142,8 +185,19 @@ blank email,blank phone,"{
                         }
                 }
 }
-",400,400,,
-multiple users different type,without version,"{
+",400,400,,,"{
+    ""phone_number"": """",
+    ""template"": {
+        ""name"": ""wa_policy_toolkit"",
+        ""version"": ""0.1"",
+        ""context_data"": {
+            ""policy_link"": ""https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
+        }
+    }
+}",400,,"{
+    ""phone_number"": """"
+}",400
+"{
     ""from"": {
         ""name"": ""Test"",
         ""email"": 
@@ -180,8 +234,17 @@ multiple users different type,without version,"{
                         }
                 }
 }
-",400,200,,
-multiple users same type,invalid versio ,"{
+",400,200,,-,"{
+    ""phone_number"": ""1231231231"",
+    ""template"": {
+        ""name"": ""what_a_helloacko"",
+        ""version"": ""0.1"",
+        ""context_data"": {
+            ""policy_link"": ""https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
+        }
+    }
+}",200,FAILED,,
+"{
     ""from"": {
         ""name"": ""Test"",
         ""email"": 
@@ -214,8 +277,17 @@ multiple users same type,invalid versio ,"{
                         }
                 }
 }
-",400,200,,FAILED
-invalid name to,old version,"{
+",400,200,,FAILED,"{
+    ""phone_number"": ""1231231231"",
+    ""template"": {
+        ""name"": """",
+        ""version"": ""0.1"",
+        ""context_data"": {
+            ""policy_link"": ""https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
+        }
+    }
+}",400,,,
+"{
     ""from"": {
         ""name"": ""Test"",
         ""email"": ""internetola@acko.com""
@@ -243,8 +315,17 @@ invalid name to,old version,"{
                         }
                 }
 }
-",200,200,SENT_TO_PROVIDER,FAILED
-blank name to,withpout context data,"{
+",200,200,SENT_TO_PROVIDER,FAILED,"{
+    ""phone_number"": ""1231231231"",
+    ""template"": {
+        ""name"": ""wa_policy_toolkit"",
+        ""version"": ""1.1"",
+        ""context_data"": {
+            ""policy_link"": ""https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
+        }
+    }
+}",200,FAILED,,
+"{
     ""from"": {
         ""name"": ""Test"",
         ""email"": ""internetola@acko.com""
@@ -269,8 +350,17 @@ blank name to,withpout context data,"{
                         ""name"": ""sms_new_claim"",
                         ""version"": ""0.2""
                 }
-}",400,400,,
-invalid email to,,"{
+}",400,400,,,"{
+    ""phone_number"": ""1231231231"",
+    ""template"": {
+        ""name"": ""wa_policy_toolkit"",
+        ""version"": """",
+        ""context_data"": {
+            ""policy_link"": ""https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
+        }
+    }
+}",200,FAILED,,
+"{
     ""from"": {
         ""name"": ""Test"",
         ""email"": ""internetola@acko.com""
@@ -289,8 +379,16 @@ invalid email to,,"{
                 ""name"": ""person""
         }
     }
-}",,400,,,
-blank email to,,"{
+}",,400,,,,"{
+    ""phone_number"": ""1231231231"",
+    ""template"": {
+        ""name"": ""wa_policy_toolkit"",
+        ""context_data"": {
+            ""policy_link"": ""https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
+        }
+    }
+}",200,FAILED,,
+"{
     ""from"": {
         ""name"": ""Test"",
         ""email"": ""internetola@acko.com""
@@ -309,8 +407,14 @@ blank email to,,"{
                 ""name"": ""person""
         }
     }
-}",,400,,,
-invalid type,,"{
+}",,400,,,,"{
+    ""phone_number"": ""1231231231"",
+    ""template"": {
+        ""name"": ""wa_policy_toolkit"",
+        ""version"": ""0.1""
+    }
+}",400,,,
+"{
     ""from"": {
         ""name"": ""Test"",
         ""email"": ""internetola@acko.com""
@@ -329,8 +433,17 @@ invalid type,,"{
                 ""name"": ""person""
         }
     }
-}",,400,,,
-blank type,,"{
+}",,400,,,,"{
+    ""phone_number"": ""1234123412"",
+    ""template"": {
+        ""name"": ""wa_policy_toolkit"",
+        ""version"": ""0.1"",
+        ""context_data"": {
+            ""policy_link"": ""https://acko.com/policy/?pid=x3lDqhFaUo5XGzSyadsklja8lw&source=selfserve""
+        }
+    }
+}",200,FAILED,,
+"{
     ""from"": {
         ""name"": ""Test"",
         ""email"": ""internetola@acko.com""
@@ -349,4 +462,4 @@ blank type,,"{
                 ""name"": ""person""
         }
     }
-}",,400,,,
+}",,400,,,,,,,,
