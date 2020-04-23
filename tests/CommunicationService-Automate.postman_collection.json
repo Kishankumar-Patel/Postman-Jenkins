@@ -20,21 +20,21 @@
 							"    pm.environment.set(\"responseTimeSMS\", pm.response.responseTime);",
 							"    ",
 							"    var temp = parseInt(pm.variables.get(\"expectedSMS\"),10);",
-							"    pm.test(\"Status code is \" + temp, function () {",
+							"    pm.test(request.name + \": Status code is \" + temp, function () {",
 							"        pm.response.to.have.status(temp);",
-							"        if(temp===200) {",
-							"            pm.sendRequest(\"https://postman-echo.com/delay/1\", function (err, response) {",
-							"                pm.sendRequest(\"http://lb-internal-ackommunication-dev.acko.in/api/status?request_id=\"+res.request_id, function (err, response) {",
+							"        pm.sendRequest(\"https://postman-echo.com/delay/1\", function (err, response) {",
+							"            if(temp===200) {",
+							"                pm.sendRequest(pm.environment.get(\"CommServiceURL\")+\"/api/v1/sms/status?request_id=\"+res.request_id, function (err, response) {",
 							"                    let str = \"Sent Succesfully to Provider.\";",
 							"                    if(pm.variables.get(\"statusSMS\") !== \"SENT_TO_PROVIDER\") str = \"Failed to send to the Provider.\"",
-							"                    pm.test(str, function() {",
+							"                    pm.test(request.name + \": \" + str, function() {",
 							"                        if(response.json().message) ",
 							"                            pm.expect(response.json().success).to.equal(false);  ",
 							"                        else pm.expect(response.json().recipients[0].status).to.equal(pm.variables.get(\"statusSMS\"));  ",
 							"                    });",
 							"                });",
-							"            });",
-							"        }",
+							"            }",
+							"        });",
 							"    });",
 							"    ",
 							"}"
@@ -63,15 +63,15 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{{callCommunicationSMS}}"
+					"raw": "{{callCommunicationSMS}}",
+					"options": {
+						"raw": {}
+					}
 				},
 				"url": {
-					"raw": "http://lb-internal-ackommunication-dev.acko.in/api/v1/sms/send",
-					"protocol": "http",
+					"raw": "{{CommServiceURL}}/api/v1/sms/send",
 					"host": [
-						"lb-internal-ackommunication-dev",
-						"acko",
-						"in"
+						"{{CommServiceURL}}"
 					],
 					"path": [
 						"api",
@@ -110,14 +110,14 @@
 							"    pm.environment.set(\"responseTimeEMAIL\", pm.response.responseTime);",
 							"    ",
 							"    var temp = parseInt(pm.variables.get(\"expectedEMAIL\"),10);",
-							"    pm.test(\"Status code is \" + temp, function () {",
+							"    pm.test(request.name + \": Status code is \" + temp, function () {",
 							"        pm.response.to.have.status(temp);",
 							"        if(temp===200) {",
 							"            pm.sendRequest(\"https://postman-echo.com/delay/1\", function (err, response) {",
-							"                pm.sendRequest(\"http://lb-internal-ackommunication-dev.acko.in/api/status?request_id=\"+res.request_id, function (err, response) {",
+							"                pm.sendRequest(pm.environment.get(\"CommServiceURL\")+\"/api/v1/email/status?request_id=\"+res.request_id, function (err, response) {",
 							"                    let str = \"Sent Succesfully to Provider.\";",
 							"                    if(pm.variables.get(\"statusEMAIL\") !== \"SENT_TO_PROVIDER\") str = \"Failed to send to the Provider.\"",
-							"                    pm.test(str, function() {",
+							"                    pm.test(request.name + \": \"+str, function() {",
 							"                        pm.expect(response.json().status).to.equal(pm.variables.get(\"statusEMAIL\"));  ",
 							"                    });",
 							"                });",
@@ -159,12 +159,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://lb-internal-ackommunication-dev.acko.in/api/v1/email/send",
-					"protocol": "http",
+					"raw": "{{CommServiceURL}}/api/v1/email/send",
 					"host": [
-						"lb-internal-ackommunication-dev",
-						"acko",
-						"in"
+						"{{CommServiceURL}}"
 					],
 					"path": [
 						"api",
@@ -183,6 +180,162 @@
 							"value": "{{statusEMAIL}}",
 							"disabled": true
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Whatsapp-Opt-in",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5965793c-1a28-4996-8f7a-9b5d84cf8683",
+						"exec": [
+							"let res = JSON.parse(responseBody);",
+							"",
+							"if(request.data.length!==undefined) {",
+							"    console.log(request.data.phone_number);",
+							"",
+							"    var temp = parseInt(pm.variables.get(\"expectedOptIn\"),10);",
+							"    pm.test(request.name + \": Status code is \" + temp, function () {",
+							"        pm.response.to.have.status(temp);",
+							"        if(temp===200) {",
+							"            pm.sendRequest(\"https://postman-echo.com/delay/1\", function (err, response) {",
+							"                let phone = (JSON.parse(request.data)).phone_number;",
+							"                pm.sendRequest(pm.environment.get(\"UserServiceURL\")+\"/api/user?phone=\"+phone, function (err, response) {",
+							"                    let str = \"User Succesfully gets Opt In.\";",
+							"                    if(pm.variables.get(\"statusOptIn\") !== \"SENT_TO_PROVIDER\") str = \"User does not gets Opt In.\"",
+							"                    if(response.code===500) ;",
+							"                    else pm.test(request.name + \": \"+str, function() {",
+							"                        pm.expect(response.json().whatsapp_optin).to.equal(true);  ",
+							"                    });",
+							"                });",
+							"            });",
+							"        }",
+							"    });",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{{callWhatsappOptIn}}"
+				},
+				"url": {
+					"raw": "{{CommServiceURL}}/api/v1/whatsapp/opt-in",
+					"host": [
+						"{{CommServiceURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"whatsapp",
+						"opt-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Whatsapp-Send",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "aa3d0223-2760-4edb-b23b-081184892586",
+						"exec": [
+							"let res = JSON.parse(responseBody);",
+							"",
+							"if(request.data.length!==undefined) {",
+							"    ",
+							"    var temp = parseInt(pm.variables.get(\"expectedSend\"),10);",
+							"    pm.test(request.name + \": Status code is \" + temp, function () {",
+							"        pm.response.to.have.status(temp);",
+							"        if(temp===200) {",
+							"            pm.sendRequest(\"https://postman-echo.com/delay/1\", function (err, response) {",
+							"                pm.sendRequest(pm.environment.get(\"CommServiceURL\")+\"/api/v1/whatsapp/status?request_id=\"+res.request_id, function (err, response) {",
+							"                    let str = \"Sent Succesfully to Provider.\";",
+							"                    if(pm.variables.get(\"statusSend\") !== \"SENT_TO_PROVIDER\") str = \"Failed to send to the Provider.\"",
+							"                    pm.test(request.name + \": \"+str, function() {",
+							"                        if(response.json().message) ",
+							"                            pm.expect(response.json().success).to.equal(false);  ",
+							"                        else pm.expect(response.json().recipients[0].status).to.equal(pm.variables.get(\"statusSend\"));  ",
+							"                    });",
+							"                });",
+							"            });",
+							"        }",
+							"    });",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Host",
+						"value": "communication-service.external.ackodev.com"
+					},
+					{
+						"key": "Postman-Token",
+						"value": "40f4fc0b-07eb-4818-a1fa-0a709154e0be,9ca302cf-2517-438d-bb41-8308ae862a31"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.15.2"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache,no-cache"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{{callWhatsappSend}}"
+				},
+				"url": {
+					"raw": "{{CommServiceURL}}/api/v1/whatsapp/send",
+					"host": [
+						"{{CommServiceURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"whatsapp",
+						"send"
 					]
 				}
 			},
