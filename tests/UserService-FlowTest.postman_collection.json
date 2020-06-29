@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "e9a852d6-f7bc-4b72-9939-0f52e38fd26c",
+		"name": "User Service Flow test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get user details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "65fc7f8a-9122-43f6-a662-6fb262c5a60e",
+						"exec": [
+							"if(pm.request.url.getQueryString()!==\"\") {",
+							"    let temp = parseInt(pm.variables.get(\"expected1\"),10);",
+							"    pm.test(request.name + \": Status code is \" + temp, function () {",
+							"        pm.response.to.have.status(temp);",
+							"    });",
+							"",
+							"    let params = pm.request.url.getQueryString().split(\"&\")[0].split(\"=\");",
+							"    let res = JSON.parse(responseBody);",
+							"    if(temp===200) {",
+							"        pm.variables.set(\"user_id\",res.id);",
+							"        pm.test(request.name + \": \" + params[0] + \" is \" + params[1], function () {",
+							"            if(params[0]===\"phone\")",
+							"                pm.expect(res[params[0]]).to.equal(params[1]);",
+							"            else",
+							"                pm.expect(res[params[0]]).to.equal(parseInt(params[1],10));",
+							"        });",
+							"    }",
+							"",
+							"    let keys = pm.variables.get(\"message.key1\").split(\";\");",
+							"    // console.log(keys);",
+							"    let values = pm.variables.get(\"message.value1\").split(\";\");",
+							"    // console.log(values);",
+							"",
+							"    for(let i=0;i<keys.length;i++) {",
+							"        let key = keys[i];",
+							"        if(key===\"\") continue;",
+							"        let value = values[i];",
+							"        pm.test(request.name + \": Response have \" + key + \" = \" + value, function () {",
+							"            if(key.includes(\"permission\")) {",
+							"                let ar = value.split(\",\");",
+							"                if(key.includes(\"add\"))",
+							"                    pm.expect(res.permissions).to.have.members(ar);",
+							"                else ",
+							"                    pm.expect(res.permissions).to.not.have.members(ar);",
+							"            } else {",
+							"                pm.expect(res[key]).to.have.string(value);",
+							"            }",
+							"        });",
+							"    }",
+							"",
+							"",
+							"",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "e8149649-1c45-423e-91bb-27eaa6683b86",
+						"exec": [
+							"let num = parseInt(Math.random()*10000000000,10);",
+							"while(num.length<10) {",
+							"    num = num*10;",
+							"}",
+							"pm.variables.set(\"rndPhone\",\"3582475029\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://entity-service-qa.internal.ackodev.com/api/{{queryURL1}}",
+					"protocol": "http",
+					"host": [
+						"entity-service-qa",
+						"internal",
+						"ackodev",
+						"com"
+					],
+					"path": [
+						"api",
+						"{{queryURL1}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "155293",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "permission update from USER",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e9951d1e-5497-4a90-ac6c-909609899ad7",
+						"exec": [
+							"",
+							"if(pm.request.url.getQueryString()!==\"\") {",
+							"    let temp = parseInt(pm.variables.get(\"expected2\"),10);",
+							"    ",
+							"    // temp = pm.response.code; //////////////////////////////////////",
+							"    ",
+							"    pm.test(request.name + \": Status code is \" + temp, function () {",
+							"        pm.response.to.have.status(temp);",
+							"    });",
+							"",
+							"    ",
+							"",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://entity-service-qa.internal.ackodev.com/api/{{queryURL2}}",
+					"protocol": "http",
+					"host": [
+						"entity-service-qa",
+						"internal",
+						"ackodev",
+						"com"
+					],
+					"path": [
+						"api",
+						"{{queryURL2}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "permission delete from USER",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bf73bf7f-abf1-4f7b-b1dd-c1b4607b2004",
+						"exec": [
+							"",
+							"if(pm.request.url.getQueryString()!==\"\") {",
+							"    let temp = parseInt(pm.variables.get(\"expected3\"),10);",
+							"    ",
+							"    // temp = pm.response.code; //////////////////////////////////////",
+							"    ",
+							"    pm.test(request.name + \": Status code is \" + temp, function () {",
+							"        pm.response.to.have.status(temp);",
+							"    });",
+							"",
+							"    ",
+							"",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://entity-service-qa.internal.ackodev.com/api/{{queryURL3}}",
+					"protocol": "http",
+					"host": [
+						"entity-service-qa",
+						"internal",
+						"ackodev",
+						"com"
+					],
+					"path": [
+						"api",
+						"{{queryURL3}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
