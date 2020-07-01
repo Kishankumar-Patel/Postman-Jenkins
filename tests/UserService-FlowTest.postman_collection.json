@@ -45,7 +45,7 @@
 							"                let ar = value.split(\",\");",
 							"                console.log(res.permissions);",
 							"                if(key.includes(\"add\"))",
-							"                    pm.expect(res.permissions).to.include(ar);",
+							"                    pm.expect(res.permissions).to.have.members(ar);",
 							"                else ",
 							"                    pm.expect(res.permissions).to.not.have.members(ar);",
 							"            } else {",
