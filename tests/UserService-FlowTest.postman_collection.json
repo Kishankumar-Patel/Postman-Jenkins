@@ -80,10 +80,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "
-http://entity-service-qa.internal.ackodev.com/api/{{queryURL1}}",
+					"raw": "http://entity-service-qa.internal.ackodev.com/api/{{queryURL1}}",
 					"host": [
-						"{{userServiceMasterURL}}"
+						"http://entity-service-qa.internal.ackodev.com"
 					],
 					"path": [
 						"api",
