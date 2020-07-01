@@ -43,8 +43,9 @@
 							"        pm.test(request.name + \": Response have \" + key + \" = \" + value, function () {",
 							"            if(key.includes(\"permission\")) {",
 							"                let ar = value.split(\",\");",
+							"                console.log(res.permissions);",
 							"                if(key.includes(\"add\"))",
-							"                    pm.expect(res.permissions).to.have.members(ar);",
+							"                    pm.expect(res.permissions).to.include(ar);",
 							"                else ",
 							"                    pm.expect(res.permissions).to.not.have.members(ar);",
 							"            } else {",
@@ -79,13 +80,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://entity-service-qa.internal.ackodev.com/api/{{queryURL1}}",
-					"protocol": "http",
+					"raw": "{{userServiceMasterURL}}/api/{{queryURL1}}",
 					"host": [
-						"entity-service-qa",
-						"internal",
-						"ackodev",
-						"com"
+						"{{userServiceMasterURL}}"
 					],
 					"path": [
 						"api",
@@ -103,7 +100,7 @@
 			"response": []
 		},
 		{
-			"name": "permission update from USER",
+			"name": "permission update for USER",
 			"event": [
 				{
 					"listen": "test",
@@ -116,7 +113,7 @@
 							"    ",
 							"    // temp = pm.response.code; //////////////////////////////////////",
 							"    ",
-							"    pm.test(request.name + \": Status code is \" + temp, function () {",
+							"    pm.test(request.name + \" - \" + pm.request.url.query.toObject().id +\": Status code is \" + temp, function () {",
 							"        pm.response.to.have.status(temp);",
 							"    });",
 							"",
@@ -132,13 +129,9 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://entity-service-qa.internal.ackodev.com/api/{{queryURL2}}",
-					"protocol": "http",
+					"raw": "{{userServiceMasterURL}}/api/{{queryURL2}}",
 					"host": [
-						"entity-service-qa",
-						"internal",
-						"ackodev",
-						"com"
+						"{{userServiceMasterURL}}"
 					],
 					"path": [
 						"api",
@@ -149,7 +142,7 @@
 			"response": []
 		},
 		{
-			"name": "permission delete from USER",
+			"name": "permission delete for USER",
 			"event": [
 				{
 					"listen": "test",
@@ -162,7 +155,7 @@
 							"    ",
 							"    // temp = pm.response.code; //////////////////////////////////////",
 							"    ",
-							"    pm.test(request.name + \": Status code is \" + temp, function () {",
+							"    pm.test(request.name + \" - \" + pm.request.url.query.toObject().id +\": Status code is \" + temp, function () {",
 							"        pm.response.to.have.status(temp);",
 							"    });",
 							"",
@@ -178,13 +171,9 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://entity-service-qa.internal.ackodev.com/api/{{queryURL3}}",
-					"protocol": "http",
+					"raw": "{{userServiceMasterURL}}/api/{{queryURL3}}",
 					"host": [
-						"entity-service-qa",
-						"internal",
-						"ackodev",
-						"com"
+						"{{userServiceMasterURL}}"
 					],
 					"path": [
 						"api",
