@@ -43,7 +43,7 @@
 							"        pm.test(request.name + \": Response have \" + key + \" = \" + value, function () {",
 							"            if(key.includes(\"permission\")) {",
 							"                let ar = value.split(\",\");",
-							"                console.log(res.permissions);",
+							"                // console.log(res.permissions);",
 							"                if(key.includes(\"add\"))",
 							"                    pm.expect(res.permissions).to.have.members(ar);",
 							"                else ",
