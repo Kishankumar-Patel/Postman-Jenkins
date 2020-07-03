@@ -44,6 +44,10 @@
 					{
 						"key": "Content-Type",
 						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "user_id=M_XAcqhlp2cmjzf4Vf6Jew:1593758744:9e388ebbf616b808cb9f6a39e080e3cbe7e08c1c"
 					}
 				],
 				"body": {
@@ -107,6 +111,10 @@
 					{
 						"key": "Content-Type",
 						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "user_id=M_XAcqhlp2cmjzf4Vf6Jew:1593758744:9e388ebbf616b808cb9f6a39e080e3cbe7e08c1c"
 					}
 				],
 				"body": {
@@ -154,7 +162,12 @@
 			],
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "user_id=M_XAcqhlp2cmjzf4Vf6Jew:1593758744:9e388ebbf616b808cb9f6a39e080e3cbe7e08c1c"
+					}
+				],
 				"url": {
 					"raw": "{{TemplateServiceURL}}/api/v1/templates?offset={{offsetAll}}&limit={{limitAll}}",
 					"host": [
@@ -222,7 +235,12 @@
 			],
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "user_id=M_XAcqhlp2cmjzf4Vf6Jew:1593758744:9e388ebbf616b808cb9f6a39e080e3cbe7e08c1c"
+					}
+				],
 				"url": {
 					"raw": "{{TemplateServiceURL}}/api/v1/config?offset={{offsetConfig}}&limit={{limitConfig}}",
 					"host": [
@@ -265,7 +283,12 @@
 			],
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "user_id=M_XAcqhlp2cmjzf4Vf6Jew:1593758744:9e388ebbf616b808cb9f6a39e080e3cbe7e08c1c"
+					}
+				],
 				"url": {
 					"raw": "{{TemplateServiceURL}}/api/v1/template/:templateName/versions",
 					"host": [
@@ -310,7 +333,12 @@
 			},
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "user_id=M_XAcqhlp2cmjzf4Vf6Jew:1593758744:9e388ebbf616b808cb9f6a39e080e3cbe7e08c1c"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n  \"context_data\": {\n    \"name\": \"text\",\n    \"Team\": \"Acko\"\n  }\n}",
@@ -364,7 +392,12 @@
 			},
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "user_id=M_XAcqhlp2cmjzf4Vf6Jew:1593758744:9e388ebbf616b808cb9f6a39e080e3cbe7e08c1c"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n  \"context_data\": {\n    \"name\": \"text\",\n    \"Team\": \"Acko\"\n  }\n}",
@@ -421,7 +454,12 @@
 			],
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "user_id=M_XAcqhlp2cmjzf4Vf6Jew:1593758744:9e388ebbf616b808cb9f6a39e080e3cbe7e08c1c"
+					}
+				],
 				"url": {
 					"raw": "{{TemplateServiceURL}}/api/v1/template/:templateName/:templateVerison",
 					"host": [
@@ -479,7 +517,12 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "user_id=M_XAcqhlp2cmjzf4Vf6Jew:1593758744:9e388ebbf616b808cb9f6a39e080e3cbe7e08c1c"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n  \"default\": true\n}",
