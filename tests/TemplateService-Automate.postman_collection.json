@@ -15,8 +15,10 @@
 						"exec": [
 							"let res = JSON.parse(responseBody);",
 							"",
-							"pm.environment.set(\"EmailVersionNumber\",res.version);",
-							"pm.environment.set(\"EmailVersionName\", res.name);",
+							"if(pm.response.code===201) {",
+							"    pm.environment.set(\"EmailVersionNumber\",res.version);",
+							"    pm.environment.set(\"EmailVersionName\", res.name);",
+							"}",
 							"",
 							"var temp = pm.variables.get(\"expected\");",
 							"",
