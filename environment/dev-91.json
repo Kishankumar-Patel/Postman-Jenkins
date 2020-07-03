@@ -4,7 +4,7 @@
 	"values": [
 		{
 			"key": "TemplateServiceURL",
-			"value": "https://template-service-uat.internal.ackodev.com",
+			"value": "https://master.acko.com/templateservice",
 			"enabled": true
 		},
 		{
