@@ -54,7 +54,7 @@
 							"        });",
 							"    }",
 							"    if(pm.request.url.query.toObject().bank_details) {",
-							"	pm.test(request.name + ": Response have bank account details of user = " + params[1], function () {",
+							"	pm.test(request.name + \": Response have bank account details of user = \" + params[1], function () {",
 							"	    pm.expect(res).to.contain.key('bank_accounts');",
 							"	});",
 							"    }",
