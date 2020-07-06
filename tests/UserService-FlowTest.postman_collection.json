@@ -4,11 +4,9 @@
 		"name": "User Service Flow test",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
-	"item": [
-		{
+	"item": [{
 			"name": "get user details",
-			"event": [
-				{
+			"event": [{
 					"listen": "test",
 					"script": {
 						"id": "65fc7f8a-9122-43f6-a662-6fb262c5a60e",
@@ -53,13 +51,12 @@
 							"            }",
 							"        });",
 							"    }",
+							"",
 							"    if(pm.request.url.query.toObject().bank_details) {",
-							"	pm.test(request.name + \": Response have bank account details of user = \" + params[1], function () {",
-							"	    pm.expect(res).to.contain.key('bank_accounts');",
-							"	});",
+							"        pm.test(request.name + \": Response have bank details of user = \" + params[1], function () {",
+							"            pm.expect(res).to.contain.key('bank_accounts');",
+							"        });",
 							"    }",
-							"",
-							"",
 							"",
 							"}"
 						],
@@ -93,43 +90,39 @@
 						"api",
 						"{{queryURL1}}"
 					],
-					"query": [
-						{
-							"key": "id",
-							"value": "155293",
-							"disabled": true
-						}
-					]
+					"query": [{
+						"key": "id",
+						"value": "155293",
+						"disabled": true
+					}]
 				}
 			},
 			"response": []
 		},
 		{
 			"name": "permission update for USER",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "e9951d1e-5497-4a90-ac6c-909609899ad7",
-						"exec": [
-							"",
-							"if(pm.request.url.getQueryString()!==\"\") {",
-							"    let temp = parseInt(pm.variables.get(\"expected2\"),10);",
-							"    ",
-							"    // temp = pm.response.code; //////////////////////////////////////",
-							"    ",
-							"    pm.test(request.name + \" - \" + pm.request.url.query.toObject().id +\": Status code is \" + temp, function () {",
-							"        pm.response.to.have.status(temp);",
-							"    });",
-							"",
-							"    ",
-							"",
-							"}"
-						],
-						"type": "text/javascript"
-					}
+			"event": [{
+				"listen": "test",
+				"script": {
+					"id": "e9951d1e-5497-4a90-ac6c-909609899ad7",
+					"exec": [
+						"",
+						"if(pm.request.url.getQueryString()!==\"\") {",
+						"    let temp = parseInt(pm.variables.get(\"expected2\"),10);",
+						"    ",
+						"    // temp = pm.response.code; //////////////////////////////////////",
+						"    ",
+						"    pm.test(request.name + \" - \" + pm.request.url.query.toObject().id +\": Status code is \" + temp, function () {",
+						"        pm.response.to.have.status(temp);",
+						"    });",
+						"",
+						"    ",
+						"",
+						"}"
+					],
+					"type": "text/javascript"
 				}
-			],
+			}],
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -148,30 +141,28 @@
 		},
 		{
 			"name": "permission delete for USER",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "bf73bf7f-abf1-4f7b-b1dd-c1b4607b2004",
-						"exec": [
-							"",
-							"if(pm.request.url.getQueryString()!==\"\") {",
-							"    let temp = parseInt(pm.variables.get(\"expected3\"),10);",
-							"    ",
-							"    // temp = pm.response.code; //////////////////////////////////////",
-							"    ",
-							"    pm.test(request.name + \" - \" + pm.request.url.query.toObject().id +\": Status code is \" + temp, function () {",
-							"        pm.response.to.have.status(temp);",
-							"    });",
-							"",
-							"    ",
-							"",
-							"}"
-						],
-						"type": "text/javascript"
-					}
+			"event": [{
+				"listen": "test",
+				"script": {
+					"id": "bf73bf7f-abf1-4f7b-b1dd-c1b4607b2004",
+					"exec": [
+						"",
+						"if(pm.request.url.getQueryString()!==\"\") {",
+						"    let temp = parseInt(pm.variables.get(\"expected3\"),10);",
+						"    ",
+						"    // temp = pm.response.code; //////////////////////////////////////",
+						"    ",
+						"    pm.test(request.name + \" - \" + pm.request.url.query.toObject().id +\": Status code is \" + temp, function () {",
+						"        pm.response.to.have.status(temp);",
+						"    });",
+						"",
+						"    ",
+						"",
+						"}"
+					],
+					"type": "text/javascript"
 				}
-			],
+			}],
 			"request": {
 				"method": "DELETE",
 				"header": [],
