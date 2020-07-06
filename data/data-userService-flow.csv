@@ -35,4 +35,4 @@ phone number of 9 digits,user/?phone=987654321,,400,message,Incorrect phone numb
 provide existing user_id,user/?id=3,,200,,,,,,,,,,,,
 provide non existing user_id,user/?id=1552622,,404,message,No element with that id,,,,,,,,,,
 provide invalid user_id,user/?id=Abc12,,500,error,Internal Server Error,,,,,,,,,,
-see bank details,user/?id=167217&bank_details=true,,200,,,,,,,,,,,,
+see bank details,user/?id=3&bank_details=true,,200,,,,,,,,,,,,
