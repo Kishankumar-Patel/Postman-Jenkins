@@ -156,7 +156,7 @@ callCommunicationeEMAIL,callCommunicationSMS,expectedEMAIL,expectedSMS,statusEMA
     }
 }",200,FAILED,"{
     ""phone_number"": ""Ab123#1d12""
-}",200
+}",400
 "{
     ""from"": {
         ""name"": ""Test"",
