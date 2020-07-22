@@ -9,7 +9,7 @@
 		},
 		{
 			"key": "UserServiceURL",
-			"value": "http://entity-service-uat-1.ap-south-1.elasticbeanstalk.com",
+			"value": "http://entity-service.internal.ackodev.com",
 			"enabled": true
 		},{
 			"key": "CommServiceURL",
