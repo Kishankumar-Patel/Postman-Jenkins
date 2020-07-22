@@ -206,7 +206,7 @@
 							"                let phone = (JSON.parse(request.data)).phone_number;",
 							"                pm.sendRequest(pm.environment.get(\"UserServiceURL\")+\"/api/user/?phone=\"+phone, function (err, response) {",
 							"                    let str = \"User Succesfully gets Opt In.\";",
-							"                    if(response.code===500) ;",
+							"                    if(response.code===400) ;",
 							"                    else pm.test(request.name + \": \"+str, function() {",
 							"                        pm.expect(response.json().whatsapp_optin).to.equal(true);  ",
 							"                    });",
