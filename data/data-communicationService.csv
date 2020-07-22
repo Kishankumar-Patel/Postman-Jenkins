@@ -234,7 +234,7 @@ callCommunicationeEMAIL,callCommunicationSMS,expectedEMAIL,expectedSMS,statusEMA
                         }
                 }
 }
-",400,200,,-,"{
+",400,200,,FAILED,"{
     ""phone_number"": ""1231231231"",
     ""template"": {
         ""name"": ""what_a_helloacko"",
